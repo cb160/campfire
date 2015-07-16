@@ -3,3 +3,7 @@
 * [Bell and Whistle Wide Game](bellandwhistle.md)
 * [Raiders](raiders.md)
 * [Runners](runners.md)
+* [Campfires Burning](campfiresburning.md)
+* [BINGO](bingo.md)
+* [Ging Gang Push Bike](pushbike.md)
+* 
