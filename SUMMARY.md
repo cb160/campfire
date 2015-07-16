@@ -1,9 +1,18 @@
-#Campfire Songs
-Opening Songs
+
+# Campfire Songs
+
+
+
+## Opening Songs
+
+
 * [Campfires Burning](campfiresburning.md)
 * [Ging Gang Push Bike](pushbike.md)
 
-Middle Songs
+
+## Middle Songs
+
+
 * [Alice the Camel](alice.md)
 * [BINGO](bingo.md)
 * [I Saw a bird](isawabird.md)
@@ -16,12 +25,16 @@ Middle Songs
 * [Singing in the Rain](singingintherain.md)
 * [Swimming Pool](swimmingpool.md)
 
-Ending Songs
+
+## Ending Songs
+
+
 * [Kum By Ya](kumbyya.md)
 * [Angels watching over me](angels.md)
 
+# Wide Games
 
-#Wide Games
+
 * [Bell and Whistle Wide Game](bellandwhistle.md)
 * [Raiders](raiders.md)
 * [Runners](runners.md)
