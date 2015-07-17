@@ -9,11 +9,19 @@ Add a Line, then: A Woochi-ka, A Woochi-Ka,
 A Woochi-Ka-Ka! )X2)
 
 Thumbs Up 
+
 Arms Out 
+
 Elbows In
+
 Knees Bent 
+
 Knees together 
+
 Toes together
+
 Chest out 
+
 Head Back 
+
 Tongue out
