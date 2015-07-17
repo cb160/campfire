@@ -1,7 +1,7 @@
 
 # I saw a bird
 
-This is a repeat after me song
+*This is a repeat after me song*
 
 I saw a bird, with a yellow bill
 It landed on, my windowsill
@@ -17,7 +17,7 @@ and then I poked, out his little eyes
 ...  with some moldy leek
 and then I twisted, his little beak
 
-...with a can of tizer
+... with a can of tizer
 and then I threw it, into the liquidizer
 
 ... with  a spongebob poster
