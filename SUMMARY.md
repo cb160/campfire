@@ -16,7 +16,7 @@
    * [One Man Went to Mow](mow.md)
    * [Singing in the Rain](singingintherain.md)
    * [Swimming Pool](swimmingpool.md)
-   * Aricamando
+   * [Aricamando](aricamando.md)
 * [Ending Songs](ending_songs.md)
    * [Kum By Ya](kumbyya.md)
    * [Angels watching over me](angels.md)
