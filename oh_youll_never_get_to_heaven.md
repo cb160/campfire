@@ -1,11 +1,10 @@
 # Oh You'll never get to heaven
 
-Oh You'll never go to heaven  
-On a sheet of glass  
-'Cause a sheet of glass  
-will cut your LEG!  
-Oh you'll never go to heaven on a sheet of glass  
-'Cause a sheet of glass will cut your leg  
+ 
+You'll never go to heaven   
+in a baked bean tin  
+'Cos a baked bean tin,  
+'s got baked beans in .  
 
 I ain't gonna grieve my Lord no more  
 I ain't gonna grieve my Lord,  
@@ -37,8 +36,6 @@ You'll never go to heaven in a limosine
 You'll never go to heaven in the QE2  
 'Cos the QE2 ain't got no loo.  
 
-You'll never go to heaven in a baked bean tin  
-'Cos a baked bean tin, 's got baked beans in .  
 
 You'll never go to heaven in a jumbo jet  
 'Cos the Lord ain't got, no runways yet.  
