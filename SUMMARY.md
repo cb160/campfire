@@ -29,7 +29,7 @@
    * [One Finger One Thumb](one_finger_one_thumb.md)
    * [Oh You'll never get to heaven](oh_youll_never_get_to_heaven.md)
    * [Lean Forwards, Lean Backwards](lean_forwards,_lean_backwards.md)
-   * Three Little Angels
+   * [Three Little Angels](three_little_angels.md)
 * [Ending Songs](ending_songs.md)
    * [Kum By Ya](kumbyya.md)
    * [Angels watching over me](angels.md)
