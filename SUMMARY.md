@@ -21,6 +21,7 @@
    * [The Shark Song](the_shark_song.md)
    * [Kookabura](kookabura.md)
    * [An Austrian Went Yodelling](an_austrian_went_yodelling.md)
+   * Pizza Hut
 * [Ending Songs](ending_songs.md)
    * [Kum By Ya](kumbyya.md)
    * [Angels watching over me](angels.md)
