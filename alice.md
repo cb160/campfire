@@ -1,8 +1,15 @@
-#Flea Fly
+#Alice the camel
 
-*This song starts of slow and repeats getting faster and faster.
-Clap hands and then Slap knees to keep the rhythm - everyone sitting down*
+Alice the camel had 5 humps  
+Alice the camel had 5 humps  
+Alice the camel had 5 humps  
+So go Alice go, boom boom boom  
 
-Flea!
+Alice the camel had 4 humps ... 
+Alice the camel had 3 humps ... 
+Alice the camel had 2 humps ...
+Alice the camel had 1 humps ...
 
-Flea Fly
+Alice the camel had no humps ...
+
+Cos Alice was a horse
