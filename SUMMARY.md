@@ -19,7 +19,7 @@
    * [Aricamando](aricamando.md)
    * [Flea Fly](flea_fly.md)
    * [The Shark Song](the_shark_song.md)
-   * Kookabura
+   * [Kookabura](kookabura.md)
 * [Ending Songs](ending_songs.md)
    * [Kum By Ya](kumbyya.md)
    * [Angels watching over me](angels.md)
