@@ -1,6 +1,7 @@
 # Summary
 
 * [Introduction](README.md)
+   * Other Songs
 * [Opening Songs](opening_songs.md)
    * [Campfires Burning](campfiresburning.md)
    * [Ging Gang Push Bike](pushbike.md)
