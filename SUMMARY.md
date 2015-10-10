@@ -20,7 +20,7 @@
    * [Flea Fly](flea_fly.md)
    * [The Shark Song](the_shark_song.md)
    * [Kookabura](kookabura.md)
-   * An Austrian Went Yodelling
+   * [An Austrian Went Yodelling](an_austrian_went_yodelling.md)
 * [Ending Songs](ending_songs.md)
    * [Kum By Ya](kumbyya.md)
    * [Angels watching over me](angels.md)
