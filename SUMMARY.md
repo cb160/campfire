@@ -5,6 +5,7 @@
 * [Opening Songs](opening_songs.md)
    * [Campfires Burning](campfiresburning.md)
    * [Ging Gang Push Bike](pushbike.md)
+   * Ging Gang Gooli
 * [Middle Songs](middle_songs.md)
    * [Alice the Camel](alice.md)
    * [BINGO](bingo.md)
