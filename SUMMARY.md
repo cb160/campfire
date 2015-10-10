@@ -31,6 +31,7 @@
    * [Lean Forwards, Lean Backwards](lean_forwards,_lean_backwards.md)
    * [Three Little Angels](three_little_angels.md)
    * [Bung it through the window](bung_it_through_the_window.md)
+* [Other Songs](other_songs.md)
 * Wide Games
    * [Bell and Whistle Wide Game](bellandwhistle.md)
    * [Raiders](raiders.md)
@@ -38,5 +39,4 @@
 * [Ending Songs](ending_songs.md)
    * [Kum By Ya](kumbyya.md)
    * [Angels watching over me](angels.md)
-* [Other Songs](other_songs.md)
 
