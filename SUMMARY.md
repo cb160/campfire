@@ -22,7 +22,7 @@
    * [Kookabura](kookabura.md)
    * [An Austrian Went Yodelling](an_austrian_went_yodelling.md)
    * [Pizza Hut](pizza_hut.md)
-   * Sweet Chariot
+   * [Sweet Chariot](sweet_chariot.md)
 * [Ending Songs](ending_songs.md)
    * [Kum By Ya](kumbyya.md)
    * [Angels watching over me](angels.md)
