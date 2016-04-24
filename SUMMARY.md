@@ -34,7 +34,7 @@
    * [Kum By Ya](kumbyya.md)
    * [Angels watching over me](angels.md)
 * [Other Songs](other_songs.md)
-* Wide Games
+* [Wide Games](CabinInAWoordmd)
    * [Bell and Whistle Wide Game](bellandwhistle.md)
    * [Raiders](raiders.md)
    * [Runners](runners.md)
