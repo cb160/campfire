@@ -31,6 +31,8 @@
    * [Three Little Angels](three_little_angels.md)
    * [Bung it through the window](bung_it_through_the_window.md)
    * [Three little bees in the garden](three_little_bees_in_the_garden.md)
+   * [What is that thing](what_is_that_thing.md)
+   * [And the grass grows round and round](and_the_grass_grows_round_and_round.md)
 * [Ending Songs](ending_songs.md)
    * [Kum By Ya](kumbyya.md)
    * [Angels watching over me](angels.md)
