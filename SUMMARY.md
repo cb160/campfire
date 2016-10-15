@@ -37,7 +37,7 @@
    * [The Penguin Song](penguin.md)
    * [The Bannana Song](bannana.md)
    * [Tarzan](tarzan.md)
-   * Mexican Canoe Song
+   * [Mexican Canoe Song](mexican_canoe_song.md)
 * [Ending Songs](ending_songs.md)
    * [Kum By Ya](kumbyya.md)
    * [Angels watching over me](angels.md)
