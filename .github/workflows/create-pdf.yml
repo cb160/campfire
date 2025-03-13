@@ -29,6 +29,14 @@ jobs:
           markdown2pdf $file ${file%.md}.pdf
         done
 
+    - name: Concatenate Markdown files
+      run: |
+        cat $(find . -name '*.md') > combined.md
+
+    - name: Convert combined Markdown to PDF
+      run: |
+        markdown2pdf combined.md combined.pdf
+
     - name: Upload PDFs as artifacts
       uses: actions/upload-artifact@v2
       with:
