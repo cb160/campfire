@@ -15,7 +15,7 @@ Each team is scored according to which roaming leader has the fewest tokens for 
 Hopefully the team will work out that it pays to coordinate their deliveries and get equal numbers of tokens to each caller. 
 
 
-#Simple Instructions to Scouts:
+# Simple Instructions to Scouts:
 
 
 1) Distribute starter tokens. 
@@ -38,5 +38,5 @@ When the game has finished we will count your team tokens and your score will be
 
 ...Go!
 
-#Additional Information
+# Additional Information
 In we prefer to play this game in the dark so the Scouts have to follow only their ears to find the bell and the whistle, though it could work in the light with a 'hide and seek' aspect to it.
