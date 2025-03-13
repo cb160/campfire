@@ -1,0 +1,36 @@
+name: Create PDF from Markdown
+
+on:
+  push:
+    paths:
+      - '**/*.md'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.x'
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install markdown2pdf
+
+    - name: Convert Markdown to PDF
+      run: |
+        for file in $(find . -name '*.md'); do
+          markdown2pdf $file ${file%.md}.pdf
+        done
+
+    - name: Upload PDFs as artifacts
+      uses: actions/upload-artifact@v2
+      with:
+        name: pdfs
+        path: '**/*.pdf'
