@@ -2,12 +2,9 @@ name: Create Campfire Songbook PDF
 
 on:
   push:
-    paths:
-      - '**/*.md'
-      - 'static/**'
-      - 'create_songbook.py'
     branches:
       - master
+      - main
   workflow_dispatch:
 
 jobs:
