@@ -6,11 +6,15 @@ on:
       - '**/*.md'
       - 'static/**'
       - 'create_songbook.py'
+    branches:
+      - master
   workflow_dispatch:
 
 jobs:
   build:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
 
     steps:
     - name: Checkout repository
@@ -35,8 +39,44 @@ jobs:
       run: |
         python create_songbook.py
 
+    - name: Count songs for release notes
+      id: count_songs
+      run: |
+        song_count=$(find . -name "*.md" -not -path "./venv/*" -not -name "README.md" -not -name "SUMMARY.md" -not -name "combined.md" | wc -l)
+        echo "song_count=$song_count" >> $GITHUB_OUTPUT
+
+    - name: Generate release tag
+      id: tag
+      run: |
+        echo "tag=v$(date +'%Y.%m.%d')-$(echo ${{ github.sha }} | cut -c1-7)" >> $GITHUB_OUTPUT
+        echo "release_name=Campfire Songbook $(date +'%Y-%m-%d')" >> $GITHUB_OUTPUT
+
     - name: Upload Songbook as artifact
       uses: actions/upload-artifact@v4
       with:
-        name: campfire-songbook
+        name: campfire-songbook-${{ steps.tag.outputs.tag }}
         path: CampfireSongbook.pdf
+
+    - name: Create Release
+      if: github.ref == 'refs/heads/master'
+      uses: softprops/action-gh-release@v1
+      with:
+        tag_name: ${{ steps.tag.outputs.tag }}
+        name: ${{ steps.tag.outputs.release_name }}
+        body: |
+          🔥 **Campfire Songbook Release**
+          
+          Automatically generated songbook containing all campfire songs with:
+          - Professional cover page
+          - Table of contents organized by category  
+          - ${{ steps.count_songs.outputs.song_count }} songs across multiple categories
+          - Proper formatting for easy singing
+          
+          **Generated from commit:** ${{ github.sha }}
+          **Build date:** $(date +'%Y-%m-%d %H:%M:%S UTC')
+          
+          Download the `CampfireSongbook.pdf` below to get the complete songbook!
+        files: |
+          CampfireSongbook.pdf
+        draft: false
+        prerelease: false
