@@ -1,1 +1,0 @@
-These are songs to use in the main part of the campfire
