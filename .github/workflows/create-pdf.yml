@@ -50,6 +50,15 @@ jobs:
       run: |
         echo "tag=v$(date +'%Y.%m.%d')-$(echo ${{ github.sha }} | cut -c1-7)" >> $GITHUB_OUTPUT
         echo "release_name=Campfire Songbook $(date +'%Y-%m-%d')" >> $GITHUB_OUTPUT
+        echo "build_date=$(date +'%Y-%m-%d %H:%M:%S UTC')" >> $GITHUB_OUTPUT
+
+    - name: Debug release info
+      run: |
+        echo "Branch: ${{ github.ref }}"
+        echo "Tag: ${{ steps.tag.outputs.tag }}"
+        echo "Release name: ${{ steps.tag.outputs.release_name }}"
+        echo "Build date: ${{ steps.tag.outputs.build_date }}"
+        echo "Song count: ${{ steps.count_songs.outputs.song_count }}"
 
     - name: Upload Songbook as artifact
       uses: actions/upload-artifact@v4
@@ -58,8 +67,10 @@ jobs:
         path: CampfireSongbook.pdf
 
     - name: Create Release
-      if: github.ref == 'refs/heads/master'
+      if: github.ref == 'refs/heads/master' || github.ref == 'refs/heads/main'
       uses: softprops/action-gh-release@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
         tag_name: ${{ steps.tag.outputs.tag }}
         name: ${{ steps.tag.outputs.release_name }}
@@ -73,7 +84,7 @@ jobs:
           - Proper formatting for easy singing
           
           **Generated from commit:** ${{ github.sha }}
-          **Build date:** $(date +'%Y-%m-%d %H:%M:%S UTC')
+          **Build date:** ${{ steps.tag.outputs.build_date }}
           
           Download the `CampfireSongbook.pdf` below to get the complete songbook!
         files: |
