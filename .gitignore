@@ -15,5 +15,9 @@ _book
 *.mobi
 *.pdf
 
+# Allow PDF in static to be checked in
+!static/*.pdf
+
+
 # Ignore virtual environment
 venv
