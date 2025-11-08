@@ -108,10 +108,43 @@ def get_song_files():
     
     return categorized_songs
 
+def calculate_page_numbers(categorized_songs):
+    """Calculate more accurate page numbers based on content analysis"""
+    page_numbers = {}
+    
+    # Page 1: Cover page
+    # Pages 2-3: Table of contents (estimate 2 pages for TOC)
+    current_page = 4
+    
+    for category, songs in categorized_songs.items():
+        # Category divider page
+        current_page += 1
+        
+        for title, file_path in songs:
+            page_numbers[file_path.stem] = current_page
+            
+            # Try to estimate song length for more accurate page counting
+            try:
+                with open(file_path, 'r', encoding='utf-8') as f:
+                    content = f.read()
+                    # Count lines and estimate pages (roughly 40 lines per page)
+                    lines = len(content.split('\n'))
+                    if lines > 40:
+                        current_page += 2  # Long song gets 2 pages
+                    else:
+                        current_page += 1  # Normal song gets 1 page
+            except:
+                current_page += 1  # Default to 1 page if can't read file
+    
+    return page_numbers
+
 def create_songbook_html(categorized_songs):
     """Create HTML content for the songbook"""
     # Import markdown here to ensure it's available when needed
     import markdown
+    
+    # Calculate page numbers for TOC
+    page_numbers = calculate_page_numbers(categorized_songs)
     
     html_content = f"""
 <!DOCTYPE html>
@@ -119,19 +152,22 @@ def create_songbook_html(categorized_songs):
 <head>
     <meta charset="utf-8">
     <title>Campfire Songbook</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
     <style>
         @page {{
             size: A4;
             margin: 2cm;
             @bottom-center {{
                 content: counter(page);
-                font-family: Arial, sans-serif;
+                font-family: 'Nunito Sans', sans-serif;
                 font-size: 10pt;
             }}
         }}
         
         body {{
-            font-family: 'Times New Roman', serif;
+            font-family: 'Nunito Sans', sans-serif;
             line-height: 1.6;
             color: #333;
         }}
@@ -147,9 +183,10 @@ def create_songbook_html(categorized_songs):
         .toc h1 {{
             text-align: center;
             font-size: 2.5em;
+            font-weight: 800;
             margin-bottom: 2em;
-            color: #8B4513;
-            border-bottom: 3px solid #8B4513;
+            color: #006838;
+            border-bottom: 3px solid #006838;
             padding-bottom: 0.5em;
         }}
         
@@ -158,11 +195,14 @@ def create_songbook_html(categorized_songs):
         }}
         
         .toc-category h2 {{
-            color: #D2691E;
+            color: #FFD200;
+            background-color: #006838;
             font-size: 1.3em;
+            font-weight: 700;
             margin-bottom: 0.5em;
-            border-left: 4px solid #D2691E;
-            padding-left: 10px;
+            border-left: 4px solid #FFD200;
+            padding: 8px 10px;
+            border-radius: 4px;
         }}
         
         .toc-songs {{
@@ -172,7 +212,30 @@ def create_songbook_html(categorized_songs):
         .toc-song {{
             margin: 0.3em 0;
             font-size: 1.1em;
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
         }}
+        
+        .toc-song-title {{
+            flex-grow: 0;
+        }}
+        
+        .toc-song-dots {{
+            flex-grow: 1;
+            border-bottom: 1px dotted #006838;
+            margin: 0 10px;
+            height: 1px;
+            align-self: center;
+        }}
+        
+        .toc-song-page {{
+            font-weight: 700;
+            color: #006838;
+            flex-grow: 0;
+        }}
+        
+
         
         .song {{
             page-break-before: always;
@@ -180,11 +243,12 @@ def create_songbook_html(categorized_songs):
         }}
         
         .song h1 {{
-            color: #8B4513;
+            color: #006838;
             font-size: 2.2em;
+            font-weight: 700;
             text-align: center;
             margin-bottom: 1.5em;
-            border-bottom: 2px solid #D2691E;
+            border-bottom: 2px solid #FFD200;
             padding-bottom: 0.5em;
         }}
         
@@ -219,13 +283,13 @@ def create_songbook_html(categorized_songs):
         }}
         
         .song-content strong {{
-            font-weight: bold;
-            color: #8B4513;
+            font-weight: 600;
+            color: #006838;
         }}
         
         .song-content em {{
             font-style: italic;
-            color: #D2691E;
+            color: #004225;
         }}
         
         .song-content ul, .song-content ol {{
@@ -234,7 +298,7 @@ def create_songbook_html(categorized_songs):
         }}
         
         .song-content blockquote {{
-            border-left: 4px solid #D2691E;
+            border-left: 4px solid #FFD200;
             margin: 1em 0;
             padding-left: 1em;
             font-style: italic;
@@ -245,11 +309,15 @@ def create_songbook_html(categorized_songs):
             page-break-before: always;
             text-align: center;
             padding: 3em 0;
+            background-color: #f8f9fa;
+            border-top: 8px solid #006838;
+            border-bottom: 8px solid #FFD200;
         }}
         
         .category-divider h1 {{
             font-size: 3em;
-            color: #8B4513;
+            font-weight: 800;
+            color: #006838;
             margin: 0;
             text-transform: uppercase;
             letter-spacing: 3px;
@@ -258,6 +326,7 @@ def create_songbook_html(categorized_songs):
         .intro {{
             text-align: center;
             font-style: italic;
+            font-weight: 400;
             color: #666;
             margin: 2em 0;
             font-size: 1.1em;
@@ -283,8 +352,17 @@ def create_songbook_html(categorized_songs):
             <h2>{category}</h2>
             <div class="toc-songs">
 """
-        for title, _ in songs:
-            html_content += f'                <div class="toc-song">• {title}</div>\n'
+        for title, file_path in songs:
+            # Get the calculated page number for this song
+            page_num = page_numbers.get(file_path.stem, '?')
+            # Create a unique ID for each song based on filename
+            song_id = file_path.stem.lower().replace(' ', '-').replace('_', '-').replace('#', '').replace("'", '').replace('(', '').replace(')', '')
+            html_content += f"""                <div class="toc-song">
+                    <span class="toc-song-title">• {title}</span>
+                    <span class="toc-song-dots"></span>
+                    <span class="toc-song-page">{page_num}</span>
+                </div>
+"""
         
         html_content += """
             </div>
@@ -308,6 +386,9 @@ def create_songbook_html(categorized_songs):
                 with open(file_path, 'r', encoding='utf-8') as f:
                     content = f.read()
                 
+                # Create a unique ID for this song (matching the TOC generation)
+                song_id = file_path.stem.lower().replace(' ', '-').replace('_', '-').replace('#', '').replace("'", '').replace('(', '').replace(')', '')
+                
                 # Remove the first heading if it exists (we'll use our own)
                 content = re.sub(r'^#\s*.*\n', '', content, count=1)
                 
@@ -328,7 +409,7 @@ def create_songbook_html(categorized_songs):
                 html_content_converted = md.convert(content)
                 
                 html_content += f"""
-    <div class="song">
+    <div class="song" id="{song_id}">
         <h1>{title}</h1>
         <div class="song-content">{html_content_converted}</div>
     </div>

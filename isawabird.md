@@ -1,4 +1,3 @@
-
 # I saw a bird
 
 *This is a repeat after me song*
