@@ -58,25 +58,35 @@ def get_song_files():
     # Define song categories based on your file structure
     categories = {
         'Action Songs': [
-            'heads_shoulders.md', 'one_finger_one_thumb.md', 'lean_forwards,_lean_backwards.md'
+            'heads_shoulders.md', 'one_finger_one_thumb.md', 'lean_forwards,_lean_backwards.md',
+            'aricamando.md', 'hamandeggs.md'
         ],
         'Animal Songs': [
-            'alice.md', 'animal_fair.md', 'bearhunt.md', 'bingo.md', 'bumblebee.md',
-            'flea_fly.md', 'jellyfish.md', 'kookabura.md', 'penguin.md', 'tarzan.md',
-            'the_shark_song.md', 'three_little_bees_in_the_garden.md', 'zombie.md'
+            'alice.md', 'animal_fair.md', 'bearhunt.md', 'bingo.md', 'boaconstrictor.md',
+            'bumblebee.md',
+            'flea_fly.md', 'fred.md','isawabird.md','jellyfish.md', 'kookabura.md', 'penguin.md', 'tarzan.md',
+            'the_shark_song.md', 'three_little_bees_in_the_garden.md', 
+            'Old Macdonald.md', 'Wyman the Worm - Canadian.md', 'yogibear.md','zombie.md'
         ],
-        'Traditional Songs': [
-            'angels.md', 'kumbyya.md', 'sweet_chariot.md', 'singing_in_the_rain.md',
-            'campfiresburning.md', 'rule_britania.md'
+        'Traditional & Spiritual Songs': [
+            'campfiresburning.md', 'kumbyya.md', 'sweet_chariot.md', 'three_little_angels.md'
         ],
-        'Fun Songs': [
-            'an_austrian_went_yodelling.md', 'bannana.md', 'bung_it_through_the_window.md',
-            'bungalow.md', 'fred.md', 'ging_gang_gooli.md', 'he_aint_gona_jump_no_more.md',
-            'international_car_song.md', 'irishsea.md', 'isawabird.md', 'joe.md',
-            'mexican_canoe_song.md', 'mow.md', 'my-poor-meatball.md', 'oh_youll_never_get_to_heaven.md',
-            'pizza_hut.md', 'pushbike.md', 'runners.md', 'swimmingpool.md', 'what_is_that_thing.md'
+        'Food Songs': [
+            'bakedpotato.md', 'bannana.md', 'I had a little chicken.md', 'pizza_hut.md',
+            'my-poor-meatball.md'
         ],
-           }
+        'Weather & Nature Songs': [
+            'singingintherain.md', 'The_grassgrows_round_and_round.md'
+        ],
+        'Fun & Silly Songs': [
+            'an_austrian_went_yodelling.md', 'black_socks.md', 'bung_it_through_the_window.md',
+            'bungalow.md',  'ging_gang_gooli.md', 'he_aint_gona_jump_no_more.md',
+            'international_car_song.md', 'irishsea.md',  'joe.md',
+            'mexican_canoe_song.md', 'mow.md', 'oh_youll_never_get_to_heaven.md',
+            'pushbike.md', 'swimmingpool.md', 'what_is_that_thing.md', 'Star Wars.md'
+            
+        ]
+    }
     
     # Collect songs by category
     categorized_songs = {}
